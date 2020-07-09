@@ -29,14 +29,17 @@
             </nav>
         </header>
         <main>
-            <h2>List of Authors</h2>
-            <ul>
-                <% for(let i=0; i<authors.length; i++){ %>
-                    <li>
-                        <a href="/articles/<%authors[i]._id%>"><%=authors[i].name%></a>
-                    </li>
-                <% } %>
-            </ul>
+            <section>
+                <%=author.name%>
+            </section>
+            <section>
+                <form action="/articles/<%=author._id%>?method=DELETE" method="POST"><
+                    <input type="submit" value="Delete Article"/>
+                </form>
+            </section>
+            <section>
+                <a href="/articles/<%=author._id%>/edit">Edit</a>
+            </section>
         </main>
     </body>
 </html>
