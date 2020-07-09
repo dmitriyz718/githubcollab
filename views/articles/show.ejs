@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+    <body>
+        <header>
+            <nav>
+                <ul>
+                    <li>
+                        <a href="/">Home</a>   
+                    </li>
+                    <li>
+                        <a href="authors/index">Authors</a>
+                    </li>
+                    <li>
+                        <a href="authors/new">Create a new Author</a>
+                    </li>
+                    <li>
+                        <a href="/articles/index">Articles</a>
+                    </li>
+                    <li>
+                        <a href="/articles/new">Create a new Article</a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <section>
+                <%=article.body%>
+            </section>
+            <section>
+                <form action="/articles/<%=articles._id%>?method=DELETE" method="POST"><
+                    <input type="submit" value="Delete Article"/>
+                </form>
+            </section>
+        </main>
+    </body>
+</html>
