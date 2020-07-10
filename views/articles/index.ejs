@@ -29,11 +29,14 @@
             </nav>
         </header>
         <main>
-            <form action="/authors" method="POST">
-                <input type="text" name="author" /><br/>
-                <textarea name="body"></textarea><br/>
-                <input type="submit" value="Create Author"/>
-            </form>
+            <h2>List of Articles</h2>
+            <ul>
+                <% for(let i=0; i<articles.length; i++){ %>
+                    <li>
+                        <a href="/articles/<%articles[i]._id%>"><%=articles[i].title%></a>
+                    </li>
+                <% } %>
+            </ul>
         </main>
     </body>
 </html>

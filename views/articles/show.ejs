@@ -29,11 +29,17 @@
             </nav>
         </header>
         <main>
-            <form action="/authors" method="POST">
-                <input type="text" name="author" /><br/>
-                <textarea name="body"></textarea><br/>
-                <input type="submit" value="Create Author"/>
-            </form>
+            <section>
+                <%=article.body%>
+            </section>
+            <section>
+                <form action="/articles/<%=articles._id%>?method=DELETE" method="POST"><
+                    <input type="submit" value="Delete Article"/>
+                </form>
+            </section>
+            <section>
+                <a href="/articles/<%=article._id%>/edit">Edit</a>
+            </section>
         </main>
     </body>
 </html>

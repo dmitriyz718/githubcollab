@@ -29,11 +29,12 @@
             </nav>
         </header>
         <main>
-            <form action="/authors" method="POST">
-                <input type="text" name="author" /><br/>
-                <textarea name="body"></textarea><br/>
-                <input type="submit" value="Create Author"/>
-            </form>
-        </main>
+			<h2>Article Attributes:</h2>
+			<form action="/articles/<%=article._id%>?_method=PUT" method="post">
+				<input type="text" name="title" value="<%=article.title%>"/><br/>
+				<textarea name="body"><%=article.body%></textarea><br/>
+				<input type="submit" value="Update Article"/>
+			</form>
+		</main>
     </body>
 </html>
